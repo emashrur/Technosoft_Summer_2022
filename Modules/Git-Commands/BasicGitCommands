@@ -1,0 +1,6 @@
+Git Commands :
+git clone : to get a repo in local.
+git status : to get the changes or differences in local repo vs remote repo
+git add : to add files which you want to push to github
+git commit -m "msg" : to commit files 
+git push : actually sends/pushes files to github (remote repo)
