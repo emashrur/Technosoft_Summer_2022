@@ -21,7 +21,7 @@ function titleCaseSentence(sampleString) {
     return titleCaseAbbr.trim();
 }
 
-let mySentence = 'i am not creative';
+let mySentence = 'wow that chicken is really tall';
 
 console.log('\nQuestion 1:\n');
 console.log(`mySentence -> ${mySentence}`);
@@ -69,7 +69,7 @@ function arrayTotal(sampleArray) {
     return sum1;
 };
 
-let numArray = [1, 1, 1, 2, 3, 1, 2];
+let numArray = [4, 32, 78, 38, 14, 153.21567894];
 
 console.log('\nQuestion 3:\n');
 console.log(`Array numbers -> ${numArray}`);

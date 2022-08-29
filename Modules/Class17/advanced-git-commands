@@ -1,0 +1,6 @@
+Merge Request : allows team members/instructors to review your files.
+Review Request : 
+Peer Review Request : 
+git clone :
+git branch : lists the local branch names
+git branch <new branch name> : to create new branch

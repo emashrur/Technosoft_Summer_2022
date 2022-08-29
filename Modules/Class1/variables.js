@@ -16,6 +16,9 @@
  * JAVASCRIPT CONSIDERS CHARACTER AS STRING DATATYPE
  */
 
+const Students = require("../Class12/ClassConceptsPackage/Students");
+const Class1 = require("../Class13/InheritancePackage/Class1");
+
 /**
  * Variable: a container
  * 
@@ -76,7 +79,15 @@ console.log('My name is '+userName+' and I am '+userAge+' years old.');
 //or
 console.log(`My name is ${userName} and I am ${userAge} years old`); // this is the more mature coding style.
 
+const c1 = new Class1();
 
+c1.showMyName1();
+
+Students.messageFromClass2022();
+
+const s = new Students();
+
+s.enrollment('KiaN' , 20 , 'usa' , 'mobile');
 
 
 
