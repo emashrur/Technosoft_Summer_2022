@@ -72,6 +72,10 @@ static messageFromClass2022(msg) {
     console.log(`Message to institute from the Class of 2022\n${msg}`);
 }
 
+static getStudentObject(id) {
+    return Students.#allStudentObjects.find(studentObject => studentObject.#student.sID === id);
+}
+
 changeCourse(newCourseName) {
     if (this.#isCourseNameValid(newCourseName) && newCourseName.toLowerCase().localeCompare(this.#student.courseDetails.sCourseName.toLowerCase()) !== 0) {
         const courseData = this.#isCourseNameValid(newCourseName);
@@ -80,10 +84,11 @@ changeCourse(newCourseName) {
         this.#student.courseDetails.sCoursePrice = courseData.price;
         this.#student.sBalance = courseData.price;
     } else if (!this.#isCourseNameValid(newCourseName)) {
-        console.log('Incalid course name');
+        console.log('Invalid course name');
     } else if (newCourseName.toLowerCase().localeCompare(this.#student.courseDetails.sCourseName.toLowerCase()) === 0) {
         console.log('You are already enrolled in the course');
     }
+
 /**
  * if new course is valid and student is not already taking the course
  *      then change the studentCourse name

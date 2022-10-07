@@ -25,8 +25,9 @@ try {
 
     t1.showMyDetails();
 
-    Students.showAllStudents();
+    addGrade(2, 'd');
 
+    s2.showMyDetails();
 
 
 } catch(e) {
@@ -34,12 +35,6 @@ try {
 } finally {
     console.log('Thank you for considering our institution');
 }
-
-
-
-
-
-
 
 
 

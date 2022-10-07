@@ -80,7 +80,16 @@ class Teachers extends Members {
     }
 
     addGrade(studentID,grade) {
-        allStudentObjects.find(student => student.s)
+        const sObject = Students.getStudentObject(studentID);
+        if (sObject) {
+            if (sObject.sGrade) {
+                sObject.sGrade = grade.toUpperCase();
+            } else {
+                console.log('Student has a grade already');
+            }
+        } else {
+            console.log('Invalid student ID');
+        }
         /**
          * input : student ID , grade
          * if student ID is valid and studendGrade is empty, only then can the teacher add the grade

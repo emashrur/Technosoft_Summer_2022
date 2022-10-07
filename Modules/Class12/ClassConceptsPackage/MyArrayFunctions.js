@@ -22,9 +22,9 @@ class MyArrayFunctions {
 
     findMaxInArray2(inputArray) {
         let max = inputArray[0];
-        inputArray.forEach(function (num) {
-            if (num > max) {
-                max = num;
+        inputArray.forEach((num) => {
+            if(num > max) {
+                max = num
             }
         })
         return max;
