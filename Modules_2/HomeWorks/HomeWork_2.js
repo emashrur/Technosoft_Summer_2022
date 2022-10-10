@@ -38,4 +38,5 @@ console.log(`\n\nsentence2 after replaceing a,A with 'Alpha' -> ${sentence2Alpha
  console.log(`Does sentence-3 include 'Body' -> ${sentence3.toLowerCase().includes('Body'.toLowerCase())}`);
  console.log(`Index of 'BoDy' in sentence3 -> ${sentence3.toLowerCase().indexOf('BoDy'.toLowerCase())}`);
  console.log(`The last-character in sentence-3 -> ${sentence3.charAt(sentence3.length - 1)}`);
- console.log(`Word 'BoDy' is present only once -> ${sentence1.toLowerCase().indexOf('BoDy'.toLowerCase()) === sentence1.toLowerCase().lastIndexOf('BoDy'.toLowerCase())}`);
+ console.log(`Word 'BoDy' is present only once -> ${sentence3.toLowerCase().indexOf('BoDy'.toLowerCase()) === sentence3.toLowerCase().lastIndexOf('BoDy'.toLowerCase()) && sentence3.toLowerCase().indexOf('BoDy'.toLowerCase()) !== -1}\n`);
+ 
