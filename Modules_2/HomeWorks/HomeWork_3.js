@@ -53,5 +53,20 @@
  sentence4_Titlecase += sentence4Words[2].charAt(0).toUpperCase() + sentence4Words[2].slice(1) + ' ';
  sentence4_Titlecase += sentence4Words[3].charAt(0).toUpperCase() + sentence4Words[3].slice(1) + ' ';
  sentence4_Titlecase = sentence4_Titlecase.trim();
- console.log(`sentence4_Titlecase -> ${sentence4_Titlecase}\n\n`);   // sentence4_Titlecase -> Have A Great Day
+ console.log(`sentence4_Titlecase -> ${sentence4_Titlecase}\n\n`)  // sentence4_Titlecase -> Have A Great Day
  
+
+ for (i=0 ; i<= allStudentData.length-1 ; i++) {
+    if (allStudentData[i].includes(' ')) {
+    let firstNameTitleCased = '';
+    let lastNameTitleCased = '';
+    let sName = allStudentData[i].name.split(' ');
+    firstNameTitleCased += sName[0].charAt(0).toUpperCase();
+    firstNameTitleCased += sName[0].substring(1).toLowerCase();
+    lastNameTitleCased += sName[1].charAt(0).toUpperCase();
+    lastNameTitleCased += sName[1].substring(1).toLowerCase()
+    allStudentData[i].name = firstNameTitleCased + ' ' + lastNameTitleCased;
+} else {
+    
+}
+}

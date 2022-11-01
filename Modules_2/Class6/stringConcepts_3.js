@@ -73,3 +73,11 @@ let substr0_4 = sentence.substr(0,4);
 console.log(`Substr 0,4 result -> ${substr0_4}`);
 let firstCharacterSubstr = sentence.substr(0,1);
 console.log(`firstCharacter result using substr -> ${firstCharacterSubstr}\n\n`);
+
+/**
+ * str = 'king';
+ * str.lenth x
+ * split function to convert to array:
+ * str.split('');
+ * 
+ */

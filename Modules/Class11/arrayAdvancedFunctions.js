@@ -123,10 +123,10 @@
      {ssn:1111, age:12, state:'PA'}, 
      {ssn:2222, age:22, state:'NY'}, 
      {ssn:3333, age:21, state:'NJ'}, 
-     {ssn:4444, age:12, state:'CA'}
+     {ssn:2222, age:12, state:'NY'}
  ];
  
- const myCitizen = citizens.find(citizen => citizen.ssn === 3333 || citizen.state === 'NY');
+ const myCitizen = citizens.find(citizen => citizen.ssn === 2222 || citizen.state === 'NY');
  
  console.log(myCitizen);
  
