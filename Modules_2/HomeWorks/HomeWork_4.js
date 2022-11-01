@@ -65,8 +65,8 @@
 
  console.log('\n\n');
 
- let studentScore = 100;
- const maxScore = 150;
+ let studentScore = 90;
+ const maxScore = 100;
  
  if (studentScore <= 100 && studentScore >= 91) {
      console.log('A');
@@ -84,6 +84,7 @@
      console.log('Invalid student score');
  }
 
+console.log('\n');
 
 /**
  * 
@@ -102,3 +103,16 @@
  * 
  * 
  */
+
+let myNumber = 15;
+if (myNumber % 5 === 0 && myNumber % 3 === 0) {
+    console.log('divisible by 5 and 3');
+} else if (myNumber % 5 === 0) {
+    console.log('divisible by 5');
+} else if (myNumber % 3 === 0) {
+    console.log('divisible by 3');
+} else {
+    console.log(`myNumber -> ${myNumber}`);
+}
+
+console.log('\n')
