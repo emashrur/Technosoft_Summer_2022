@@ -21,6 +21,35 @@ let resultSplit2 = sampleSentence.split(' ');
  * 
  */
 
+ let greatestCommonFactor = (num1, num2) => {
+    let resultFactor = 0;
+    if (num1 === num2) {
+        resultFactor += num1;
+    } else if (num1 < num2) {
+        for (i = num1 ; i >= 0 ; i--) {
+            if (num2 % i === 0) {
+                resultFactor += i;
+            } else {
+                resultFactor += 1;
+            }
+            break;
+        }
+    } else if (num2 > num1) {
+        for (i = num2 ; i >= 0 ; i--) {
+            if (num1 % i === 0) {
+                resultFactor += i;
+            } else {
+                resultFactor += 1;
+            }
+            break;
+        }
+    }
+    let returnArray = [num1, num2, resultFactor];
+    let returnString = `The greatest common factor of ${returnArray[0]} and ${returnArray[1]} is ${returnArray[2]}`;
+    return returnString;
+}
+
+console.log(greatestCommonFactor(40,50));
 
 
 

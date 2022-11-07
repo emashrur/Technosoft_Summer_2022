@@ -10,8 +10,6 @@ let toTitleCase = (sentence) => {
 }
 
 
-
-
 // Q1
 
 

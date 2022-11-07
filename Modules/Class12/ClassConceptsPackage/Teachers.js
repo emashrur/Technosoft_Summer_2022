@@ -79,7 +79,15 @@ class Teachers extends Members {
 
     }
 
-    addGrade(studentID,grade) {
+    gradeStudent(studentID,grade) {
+                /**
+         * input : student ID , grade
+         * if student ID is valid and studendGrade is empty, only then can the teacher add the grade
+         * update student.sGrade = grade
+         * always store grade in uppercase()
+         * if studentGrade !== '', then print 'Remove grade from the student'
+         * if student ID is invalid then print 'Invalid student ID'
+         */
         const sObject = Students.getStudentObject(studentID);
         if (sObject) {
             if (sObject.sGrade) {
@@ -90,14 +98,7 @@ class Teachers extends Members {
         } else {
             console.log('Invalid student ID');
         }
-        /**
-         * input : student ID , grade
-         * if student ID is valid and studendGrade is empty, only then can the teacher add the grade
-         * update student.sGrade = grade
-         * always store grade in uppercase()
-         * if studentGrade !== '', then print 'Remove grade from the student'
-         * if student ID is invalid then print 'Invalid student ID'
-         */
+
     }
 
     removeGrade() {
