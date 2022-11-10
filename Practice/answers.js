@@ -1,7 +1,3 @@
-
-
-
-
 const reverseArray =  (sampleArray) => {
     let returnArray = [];
     for (i = sampleArray.length-1 ; i >= 0 ; i--) {

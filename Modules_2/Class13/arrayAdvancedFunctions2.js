@@ -68,7 +68,7 @@ console.log(`Name of account under id 6543 -> ${accountData[indexOfId6543].name}
  */
 
 console.log('Using find() function to print account name with iD = 6543');
-let id6543 = accountData.find(account => account.id ===6543);
+let id6543 = accountData.find(account => account.id === 6543);
 console.log(`Name of account under id 6543 -> ${id6543.name}\n`);
 
 /**

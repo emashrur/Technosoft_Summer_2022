@@ -51,6 +51,22 @@ let resultSplit2 = sampleSentence.split(' ');
 
 console.log(greatestCommonFactor(40,50));
 
+function changeAddress(id, newAddress) {
+    if (id === this.studentData.id) {
+        this.memberData.mAddress = newAddress;
+    } else {
+        console.log('Invalid id provided')
+    }
+}
+
+// const changeAddress2= (id, newAddress) = {
+//     if (id === this.studentData.id) {
+//         this.memberData.mAddress = newAddress;
+//     }
+// }
+
+
+
 
 
 

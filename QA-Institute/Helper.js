@@ -1,16 +1,28 @@
+
+
 class Helper {
-
-
-    static toTitleCase (inputStr) {
-        let resultStr = '';
-        const arr2 = inputStr.toLowerCase().split(' ');
-        for (let i=0 ; i < inputStr.length ; i++) {
-            resultStr = resultStr + arr2[i].charAt(0) + arr2[i].substring(1) + ' ';
+    static toTitleCase(inputString) {
+        let returnString = ''; 
+        let arrayVessel = inputString.toLowerCase().split(' ');
+        for (let i = 0 ; i <= arrayVessel.length - 1 ; i++) {
+             returnString += arrayVessel[i].charAt(0).toUpperCase();
+             returnString += arrayVessel[i].substring(1) + ' ';
         }
-        return resultStr.trim();
-    }
-
-
+        returnString = returnString.trim();
+        return returnString;
+     }
 
 }
+
 module.exports = Helper;
+
+let inputString = 'EUROPE';
+let returnString = '';
+console.log(inputString);
+let arrayVessel = inputString.toLowerCase().split(' ');
+console.log(arrayVessel);
+for (let i = 0 ; i <= arrayVessel.length - 1 ; i++) {
+    returnString += arrayVessel[i].charAt(0).toUpperCase();
+    returnString += arrayVessel[i].substring(1) + ' ';
+}
+console.log(returnString);

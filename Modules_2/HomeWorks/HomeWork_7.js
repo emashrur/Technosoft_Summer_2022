@@ -95,7 +95,7 @@ console.log(`\nReversed version of the sentence "${sampleSentence}" -> "${revers
  * 
  */
 
- let toTitleCase = (inputString) => {
+ const toTitleCase = (inputString) => {
     let returnString = ''; 
     let arrayVessel = inputString.toLowerCase().split(' ');
     for (i = 0 ; i <= arrayVessel.length - 1 ; i++) {

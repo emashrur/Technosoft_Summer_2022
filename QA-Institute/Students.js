@@ -1,34 +1,45 @@
 const Members = require("./Members");
 const Helper = require("./Helper");
 
-    const courseData = [
-        {
-            cName : 'QA',
-            cFee : 100
-        },
-         {
-            cName : 'Front End',
-            cFee : 200
-        },
-        {
-            cName : 'Back End',
-            cFee : 300
-        },
-        {
-            cName : 'PM',
-            cFee : 400
-        }
-    ]
 
-class Students extends Members {
 
-    // variables (Class/Field variables)
+
+const courseData = [
+    {
+        cName : 'QA',
+        cFee : 100
+    },
+    {
+        cName : 'Front End',
+        cFee : 200
+    },{
+        cName : 'Back End',
+        cFee : 300
+    },{
+        cName : 'PM',
+        cFee : 400
+    }
+]
+
+
+/**
+ *  variables (Class/Field variables)
     studentData = {
         sId: 0,
         sCourseName: '',
         sTopicsCovered: '',
         sBalance: 0,
-        sGrade: '',
+        sGrade: ''
+    }
+ */
+class Students extends Members {
+
+    studentData = {
+        sId : 0,
+        sCourseName : '',
+        sTopicsCovered : '',
+        sBalance : 0,
+        sGrade : ''
     }
 
     static studentIdTracker = 100;
@@ -48,104 +59,83 @@ class Students extends Members {
      *          -> bestWishes
      */
 
-
-    /**
-     * -> enrollment
-     *  age >= 16
-     *      if not, do not enroll and show message, Student has to be of age 16 or above
-     * 
-     *  if invalid course name 
-     *      do not enroll and show message, Please enter a valid course name. Course entered is "ABC"
-     * 
-     * if data is correct
-     *      show message, Congratulations for enrolling in XYZ course
-     *                    Your student id : SXXX
-     * 
-     * courseName, age
-     */
-    // number, 4-string
-    enrollment(age, courseName, name, email, address) {
-        if (age < 16) {
+    constructor(age, courseName, name, email, address) {
+        super();
+        if (age <= 0 || courseName.length === 0 || name.length === 0 || email.length === 0 || address.length === 0) {
+            throw 'Incomplete Data';
+        } else if (age < 16) {
             console.log('Student has to be of age 16 or above');
         } else {
             const cObject = this.verifyCourseName(courseName);
             if (!cObject) {
-                console.log(`Please enter a valid course name. Course entered is "${courseName}"`);
+                console.log(`Please enter a valid course name. Course entered is "${courseName}"`)
+                throw 'Invalid courseName';
             } else {
-                // start enrollment process
-                this.memberData.mName = Helper.toTitleCase(name);
                 this.memberData.mAge = age;
-                this.memberData.mEmail = email;
-                this.memberData.mAddress = address;
-                this.studentData.sBalance = cObject.cFee;
-                this.studentData.sCourseName = cObject.cName;
+                this.studentData.sCourseName = cObject.cName
+                this.memberData.mName = Helper.toTitleCase(name);
+                this.memberData.mEmail = email.toLowerCase();
+                this.memberData.mAddress = Helper.toTitleCase(address);
+                this.studentData.sBalance += cObject.cFee;
                 Students.studentIdTracker++;
                 this.studentData.sId = `S${Students.studentIdTracker}`;
-                console.log(`Congratulations for enrolling in ${cObject.cName} course.\nStudent id: S${Students.studentIdTracker}`);
             }
         }
     }
 
-    /**
-     * This function is to verify 
-     *  if the courseName exists as one of the courses in the courseData
-     * 
-     * if courseName exists
-     *      returns courseObject
-     * otherwise
-     *      returns undefined
-     * 
-     */
-    verifyCourseName(courseName) {
-        return courseData.find(
-            cData => cData.cName.toUpperCase().localeCompare(courseName.toUpperCase()) === 0
-        )
-    }
 
-    /**
-     * -> getProfile
-     * Show:
-     * Profile:::
-     * Id: student-id
-     * Name: student-name
-     * Email: student-email
-     * Balance: student-balance
-     * Address: student-address
-     * 
-     */
-    getProfile() {
-        console.log(
-            `\n\t:::: Profile :::
+
+    // Functions:
+
+    verifyCourseName = (courseName) => {
+        return courseData.find(cData => cData.cName.toUpperCase().localeCompare(courseName.toUpperCase()) === 0);
+    }
+    
+
+    getProfile = (studentId) => {
+        if (this.studentData.sId === studentId) {
+            console.log(`\n\t:::: Profile :::: 
             Id: ${this.studentData.sId}
             Name: ${this.memberData.mName}
             Email: ${this.memberData.mEmail}
             Balance: ${this.studentData.sBalance}
-            ----------------------\n`
-        );
+            Address: ${this.memberData.mAddress}
+            ----------------------\n`);
+        } else {
+            console.log(`You have entered invalid id. Invalid id: S${studentId}`)
+        }
     }
-    
-    // changeName
-    // changeCourse
-    // makePayment
 
-    /**
-     * bestWishes()
-     * 
-     * To send wishes/messages to Institute on behalf on all Students
-     */
-    static bestWishes(msg) {
-        console.log(`On behalf of all students -> ${msg}`);
+    changeAddress(id, newAddress) {
+        if (id === this.studentData.sId) {
+            this.memberData.mAddress = Helper.toTitleCase(newAddress);
+        } else {
+            console.log('Invalid id provided')
+        }
     }
 
 
-
-
-
-
-
-
+    makePayment(id, paymentAmount) {
+        if(id !== this.studentData.sId){
+            console.log(`You have entered invalid id. Invalid id: ${sId}`);
+          }else if (this.studentData.sBalance === 0) {
+                console.log(`No payment is required at this time.`);
+              } else {
+                this.studentData.sBalance -= paymentAmount;
+                console.log(`Thank you for making payment. Your updated balance is ${this.studentData.sBalance}`);
+              }
+    }
 
 
 
 }
+    
+
+
+
+
+
+
+
 module.exports = Students;
+

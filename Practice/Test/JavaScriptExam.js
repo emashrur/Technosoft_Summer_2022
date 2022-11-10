@@ -1,6 +1,6 @@
 // TitleCaseFunction
 
-let toTitleCase = (sentence) => {
+const toTitleCase = (sentence) => {
     let converted = '';
     const sentenceWords = sentence.toLowerCase().split(' ');
     for (let i=0 ; i <= sentenceWords.length-1 ; i++ ) {
@@ -27,7 +27,6 @@ const removeNumFromArray = (inputArray , num) => {
  console.log('\n')
 
  
-
  // Q2
  
  let allStudentData_3 = [
@@ -59,7 +58,7 @@ console.log(allStudentData_3)
 
 const titleCaseAllStudentNames = (allStudentData) => {
     for (i=0 ; i<= allStudentData.length-1 ; i++) {
-        allStudentData[i].name = toTitleCase(allStudentData[i].name)
+        allStudentData[i].name = toTitleCase(allStudentData[i].name);
     }
 }
 
@@ -88,7 +87,7 @@ const titleCaseAllStudentNames = (allStudentData) => {
     
  }
 
- updateFirstName(2, 'King', allStudentData_3);
+ updateFirstName(2, 'Kamila', allStudentData_3);
 
  console.log('\n');
 
