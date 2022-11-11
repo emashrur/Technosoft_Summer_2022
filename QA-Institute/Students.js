@@ -3,7 +3,6 @@ const Helper = require("./Helper");
 
 
 
-
 const courseData = [
     {
         cName : 'QA',
@@ -95,11 +94,11 @@ class Students extends Members {
     getProfile = (studentId) => {
         if (this.studentData.sId === studentId) {
             console.log(`\n\t:::: Profile :::: 
-            Id: ${this.studentData.sId}
-            Name: ${this.memberData.mName}
-            Email: ${this.memberData.mEmail}
-            Balance: ${this.studentData.sBalance}
-            Address: ${this.memberData.mAddress}
+            Id: ${this.studentData.sId};
+            Name: ${this.memberData.mName};
+            Email: ${this.memberData.mEmail};
+            Balance: ${this.studentData.sBalance};
+            Address: ${this.memberData.mAddress};
             ----------------------\n`);
         } else {
             console.log(`You have entered invalid id. Invalid id: S${studentId}`)
@@ -109,8 +108,9 @@ class Students extends Members {
     changeAddress(id, newAddress) {
         if (id === this.studentData.sId) {
             this.memberData.mAddress = Helper.toTitleCase(newAddress);
+            console.log(`Address successfully changed. Your updated address is ${this.memberData.mAddress}`);
         } else {
-            console.log('Invalid id provided')
+            console.log('Invalid id provided');
         }
     }
 

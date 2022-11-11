@@ -130,6 +130,10 @@
  *          show message -> We will miss you; hope you join our future batch.
  *      otherwise,
  *          show message, You have entered invalid student-id
+keyword.control.flow.js
+meta.block.js
+meta.arrow.js
+meta.var.expr.js
  */
 
 

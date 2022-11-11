@@ -18,3 +18,7 @@ s1.getProfile('S101');
 s1.makePayment('S101', 200);
 s1.getProfile('S101');
 
+s2.makePayment('S102', 400);
+s2.changeAddress('S102', 'hong kOnG');
+s2.getProfile('S102');
+

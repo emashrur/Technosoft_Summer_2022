@@ -83,8 +83,6 @@ const titleCaseAllStudentNames = (allStudentData) => {
             console.log(`Your name is updated successfully, new full name in the records: "${thisStudent.name}"`);
         }
     }
-    
-    
  }
 
  updateFirstName(2, 'Kamila', allStudentData_3);
