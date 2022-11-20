@@ -34,7 +34,7 @@
  *      input from user? setTime, snoozeRounds
  *      return ${soundAtSetTime} for (${snoozeRounds} times)
  * 
- * billPay
+ * payBill
  *      purpose -> to pay bill
  *      input from user? -> cardNumber, amountDue, billingAddress
  *      output -> confirmation number 

@@ -34,3 +34,21 @@ const array5 = [
         id: 5432
     }
 ]
+const courseData = [
+    {
+        course : 'QA',
+        fee : 4000
+    },
+    {
+        course: 'PM',
+        fee : 3000
+    },
+    {
+        course : 'Front End',
+        fee : 5000
+    },
+    {
+        course : 'Full Stack',
+        fee : 8000
+    }
+]

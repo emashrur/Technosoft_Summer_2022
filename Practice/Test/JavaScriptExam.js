@@ -52,6 +52,8 @@ const removeNumFromArray = (inputArray , num) => {
     }
 ]
 
+
+
 console.log(allStudentData_3)
 
 
@@ -88,6 +90,7 @@ const titleCaseAllStudentNames = (allStudentData) => {
  updateFirstName(2, 'Kamila', allStudentData_3);
 
  console.log('\n');
+
 
 
  
