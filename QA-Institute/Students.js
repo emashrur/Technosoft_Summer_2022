@@ -12,10 +12,12 @@ const courseData = [
     {
         cName : 'Front End',
         cFee : 200
-    },{
+    },
+    {
         cName : 'Back End',
         cFee : 300
-    },{
+    },
+    {
         cName : 'PM',
         cFee : 400
     }
