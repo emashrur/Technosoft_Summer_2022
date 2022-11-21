@@ -37,7 +37,7 @@ f1.getProfile('f101');
 f1.changeAddress('f101', 'BeLgIum');
 f1.getProfile('f101');
 
-f1.changeCourse('f101', )
+f1.changeCourse('f101', 'qa');
 
 
 
